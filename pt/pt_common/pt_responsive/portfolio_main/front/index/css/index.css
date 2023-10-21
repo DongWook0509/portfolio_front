@@ -47,18 +47,18 @@ body {
 #logo a {
   font-size: 30px;
   font-weight: 800;
-  color: #039be5;
+  color: white;
 }
 
 /* #paper {width:100%; height:1200px;} */
 #works {
   max-width: 1380px;
-  background: #f9fbe7;
+  background: #DEE1E7;
   padding: 50px 0;
 }
 #email {
   width: 100%;
-  background: #e8f5e9;
+  background: #AEB1BD;
   padding: 50px 0;
 }
 
@@ -66,7 +66,7 @@ body {
 #contents #paper {
   max-width: 1380px;
   padding-top: 118px;
-  background: #e8e8e8;
+  background: #628dc2;
 }
 
 .paper_box {
@@ -104,9 +104,17 @@ body {
   justify-content: center;
 }
 
+.paper_right .paper_tel {
+  color: #000;
+  font-weight: 600;
+  font-size: 18px;
+}
+
 .paper_right h2 {
-  font-size: 80px;
-  color: #3e465f;
+  font-size: 50px;
+  line-height: 60px;
+  color: #D1D1D1;
+  text-shadow: 2px 4px 2px gray;
 }
 
 .paper_right p {
@@ -114,7 +122,7 @@ body {
   font-weight: 600;
   font-size: 20px;
   line-height: 2;
-  color: #596075;
+  color: white;
 }
 
 .paper_information {
@@ -122,11 +130,14 @@ body {
   display: flex;
   margin: 0 auto;
   max-width: 920px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .information {
-  width: 320px;
+  background: white;
+  width: 310px;
+  border-radius: 10px;
+  padding-bottom: 20px;
 }
 
 .information p {
@@ -138,22 +149,35 @@ body {
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -30px;
 }
 
-.information h2 {
+.information .title_weather {
+  display: block;
   font-weight: 600;
-  line-height: 2;
-  font-size: 18px;
+  line-height: 1.5;
+  font-size: 14px;
   color: #656565;
 }
 
 .information > div {
-  line-height: 2;
-  font-size: 18px;
+  margin: 4px 0;
+  line-height: 1.5;
+  font-size: 14px;
   font-weight: 600;
   color: #9095a3;
 }
 
+.cicon img{
+  width: 100px;
+  height: 100px;
+}
+
 .ability_modum {
-  padding-top: 40px;
+  padding-top: 30px;
+}
+
+.ability {
+  margin: 0px 10px 0;
+  background: white;
+  border-radius: 10px;
 }
 
 .ability > span {
@@ -177,7 +201,7 @@ body {
 }
 
 .ability [class^="ability"] [class^="ability"] .ai_text {
-  padding-top: 15px;
+  padding-top: 18px;
 }
 
 .ablity_js {
@@ -220,14 +244,16 @@ body {
 }
 
 .ability img.illustration {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   margin-right: 5px;
-  margin-top: 5px;
+  margin-top: 7px;
 }
 
 .diary {
+  background: white;
   width: 320px;
+  border-radius: 10px;
 }
 
 .diary span {
@@ -292,7 +318,8 @@ body {
   box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
     rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-  border-radius: 35px;
+  border-radius: 15px;
+  background: white;
 }
 
 .services_container .services_bottom {
@@ -306,21 +333,8 @@ body {
   padding-top: 25px;
 }
 
-.services_container .services_bottom.active .service {
-  opacity: 1;
-}
-
-.services_container .services_bottom.active .service:nth-child(1) {
-  transition-delay: 0.2s;
-}
-.services_container .services_bottom.active .service:nth-child(2) {
-  transition-delay: 0.4s;
-}
-.services_container .services_bottom.active .service:nth-child(3) {
-  transition-delay: 0.8s;
-}
-
 .services_container .service {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -329,31 +343,66 @@ body {
   width: 230px;
   height: 230px;
   border-radius: 100%;
+  border: 1px solid white;
   background-color: #ffffff;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
-  opacity: 0;
   transition: 0.3s;
-}
 
-.services_container .service {
   line-height: 2;
   font-weight: 500;
   font-size: 20px;
+  overflow: hidden;
+}
+
+.service .service_information {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.45);
+  width: 230px;
+  height: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  left: 0;
+  top: 100%;
+  right: 0;
+  bottom: -100%;
+
+  font-size: 15px;
+  color: white;
+  line-height: 2.0;
+  font-weight: 400;
+
+  border-radius: 100%;
+}
+
+.service:hover .service_information {
+  top: 0;
+  bottom: 0;
 }
 
 .services_container .sunmoon_logo {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
+  margin-bottom: 10px;
 }
 
 .services_container .northstar_logo {
-  margin-top: 35px;
   width: 200px;
   height: 34px;
+  margin-bottom: 35px;
+}
+
+.services_container .service:last-child {
+  text-align: center;
+  font-size: 20px;
+  padding-top: 30px;
 }
 
 .services_container .welcome_logo {
+  margin-left: 5px;
   width: 100px;
   height: 100px;
 }
@@ -382,17 +431,17 @@ body {
 
 .pc {
   background: #f6f6f6;
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 .moblie {
   background: #f6f6f6;
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 .design {
   background: #f6f6f6;
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
@@ -411,12 +460,12 @@ body {
   right: 0;
   bottom: -100%;
 
-  font-size: 20px;
+  font-size: 15px;
   color: white;
   line-height: 1.2;
   font-weight: 400;
 
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .mix-wrapper > div:hover .mixitup_box .mixitup_information {
@@ -436,12 +485,17 @@ body {
   text-transform: uppercase;
   text-align: center;
   font-size: 40px;
-  color: #212529;
+  color: black;
   font-weight: 700;
 }
 
 /**/
 .mix.design {
+  width: 31%;
+  margin: 1em 1%;
+  text-align: center;
+  padding: 5px;
+  display: inline-block;
   list-style: none;
 }
 
@@ -455,6 +509,13 @@ body {
 .mix.design:hover {
   opacity: 0.75;
 }
+
+.mix.design .burger_logo {
+  margin: 55px 0 55px;
+  width: 100px;
+  height: 110px;
+}
+
 
 #lightbox-overlay {
   opacity: 0;
@@ -491,7 +552,7 @@ body {
   text-transform: uppercase;
   text-align: center;
   font-size: 40px;
-  color: #212529;
+  color: white;
   font-weight: 700;
 }
 
@@ -503,17 +564,21 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
 }
 
 .design_box {
   padding: 20px 0;
-  width: 32%;
-  background: #c8e6c9;
-  margin: 5px 7px;
-  border-radius: 20px;
+  margin: 1em 1%;
+  width: 31%;
+  background: white;
+  border-radius: 10px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.design_box .square_logo {
+  height: 285px;
 }
 
 .design_box li {
@@ -521,10 +586,10 @@ body {
 }
 
 .design_box img {
-  width: 315px;
-  height: 247px;
+  width: 90%;
+  height: 100%;
   display: block;
-  border-radius: 20px;
+  border-radius: 10px;
   margin: 0 auto;
   margin-bottom: 10px;
 }
@@ -535,10 +600,10 @@ body {
 
 .design_box_content {
   padding: 10px 0 10px 20px;
-  width: 86%;
+  width: 90%;
   margin: 0 auto;
   background: #eee;
-  border-radius: 20px;
+  border-radius: 10px;
   border: none;
   display: flex;
   flex-direction: column;
@@ -727,19 +792,19 @@ body {
   #logo a {
     font-size: 15px;
     font-weight: 800;
-    color: #039be5;
+    color: white;
   }
 
   /* #paper {width:100%; height:1200px;} */
   #works {
     margin: 0 auto;
     max-width: 90%;
-    background: #f9fbe7;
+    background: #DEE1E7;
     padding: 50px 0;
   }
   #email {
     width: 90%;
-    background: #e8f5e9;
+    background: #AEB1BD;
     padding: 50px 0;
     margin: 0 auto;
   }
@@ -749,7 +814,7 @@ body {
     margin: 0 auto;
     max-width: 90%;
     padding-top: 118px;
-    background: #e8e8e8;
+    background: #628dc2;
   }
 
   .paper_box {
@@ -799,7 +864,7 @@ body {
     font-weight: 600;
     font-size: 13px;
     line-height: 2;
-    color: #596075;
+    color: white;
   }
 
   .paper_information {
@@ -832,6 +897,10 @@ body {
     line-height: 2;
     font-size: 18px;
     color: #656565;
+  }
+
+  .paper_tel{
+    display: none;
   }
 
   .information > div {
@@ -916,7 +985,9 @@ body {
   }
 
   .diary {
+    background: none;
     width: 320px;
+    padding-bottom: 30px;
   }
 
   .diary span {
@@ -924,7 +995,7 @@ body {
     display: block;
     font-weight: 500;
     font-size: 25px;
-    color: #434343;
+    color: white;
     box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -30px;
   }
 
@@ -995,19 +1066,6 @@ body {
     padding-top: 25px;
   }
 
-  .services_container .services_bottom.active .service {
-    opacity: 1;
-  }
-
-  .services_container .services_bottom.active .service:nth-child(1) {
-    transition-delay: 0.2s;
-  }
-  .services_container .services_bottom.active .service:nth-child(2) {
-    transition-delay: 0.4s;
-  }
-  .services_container .services_bottom.active .service:nth-child(3) {
-    transition-delay: 0.8s;
-  }
 
   .services_container .service {
     display: flex;
@@ -1021,15 +1079,40 @@ body {
     background-color: #ffffff;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
-    opacity: 0;
     transition: 0.3s;
-  }
 
-  .services_container .service {
-    line-height: 2;
-    font-weight: 500;
     font-size: 20px;
   }
+
+  .service .service_information {
+    position: absolute;
+  
+    background: rgba(0, 0, 0, 0.45);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  
+    left: 0;
+    top: 100%;
+    right: 0;
+    bottom: -100%;
+  
+    font-size: 15px;
+    color: white;
+    line-height: 1.2;
+    font-weight: 400;
+  
+    border-radius: 100%;
+  }
+
+  .mix-wrapper > div:hover .mixitup_box .mixitup_information {
+  top: 0;
+  bottom: 0;
+  }
+
 
   .services_container .sunmoon_logo {
     width: 100px;
@@ -1053,11 +1136,16 @@ body {
     flex-wrap: wrap;
     margin: 0 auto;
     padding: 10px 0 10px;
-    width: 80%;
+    width: 90%;
     transition: all 3s ease-in-out;
   }
 
   .mix-wrapper > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48%;
+    height: 230px;
     position: relative;
     overflow: hidden;
   }
@@ -1073,17 +1161,17 @@ body {
 
   .pc {
     background: #f6f6f6;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   }
   .moblie {
     background: #f6f6f6;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   }
   .design {
     background: #f6f6f6;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   }
 
@@ -1102,17 +1190,17 @@ body {
     right: 0;
     bottom: -100%;
 
-    font-size: 20px;
+    font-size: 10px;
     color: white;
     line-height: 1.2;
     font-weight: 400;
 
-    border-radius: 20px;
+    border-radius: 10px;
   }
 
   .mixitup_box img {
     width: 100%;
-    height: 110px;
+    height: 100%;
   }
 
   .mix-wrapper > div:hover .mixitup_box .mixitup_information {
@@ -1138,20 +1226,33 @@ body {
 
   /**/
   .mix.design {
+    width: 48%;
+    margin: 1em 1%;
+    text-align: center;
+    padding: 5px;
+    display: inline-block;
     list-style: none;
   }
-
+  
   .mix.design img {
     max-width: 100%;
-    width: 100px;
-    height: 110px;
+    width: 230px;
+    height: 220px;
     transition: opacity 0.3s ease-in-out;
   }
 
+
+  
   .mix.design:hover {
     opacity: 0.75;
   }
-
+  
+  .mix.design .burger_logo {
+    margin: 55px 0 55px;
+    width: 100px;
+    height: 110px;
+  }
+  
   #lightbox-overlay {
     opacity: 0;
     pointer-events: none;
@@ -1187,7 +1288,7 @@ body {
     text-transform: uppercase;
     text-align: center;
     font-size: 40px;
-    color: #212529;
+    color: white;
     font-weight: 700;
   }
 
@@ -1205,10 +1306,10 @@ body {
 
   .design_box {
     padding: 20px 0;
-    width: 47%;
-    background: #c8e6c9;
-    margin: 5px 7px;
-    border-radius: 20px;
+    margin: 1em 1%;
+    width: 48%;
+    background: white;
+    border-radius: 10px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
 
@@ -1217,23 +1318,26 @@ body {
   }
 
   .design_box img {
-    /*width: 315px;*/
-    width: 85%;
-    height: 200px;
+    width: 90%;
+    height: 255px;
     object-fit:cover;   
       
     display: block;
-    border-radius: 20px;
+    border-radius: 10px;
     margin: 0 auto;
     margin-bottom: 10px;
   }
 
+  .design_box .square_logo {
+    height: 255px;
+  }
+
   .design_box_content {
     padding: 10px 0 10px 20px;
-    width: 86%;
+    width: 90%;
     margin: 0 auto;
     background: #eee;
-    border-radius: 20px;
+    border-radius: 10px;
     border: none;
     display: flex;
     flex-direction: column;
@@ -1371,24 +1475,73 @@ body {
   }
 
   @media screen and (max-width: 592px) {
+    
+    
     .design_box {
-      padding: 20px 0;
-      width: 100%;
-      background: #c8e6c9;
-      margin: 5px 7px;
+      margin: 1em 1%;
+      padding: 20px 10px;
+      width: 98%;
+      height: 100%;
+      background: white;
       border-radius: 20px;
       box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     }
 
     .design_box img {
-      /* width: 315px; */
-      width: 85%;
-      height: 300px;
+      width: 98%;
+      height: 90%;
       object-fit: cover;
       display: block;
-      border-radius: 20px;
+      border-radius: 10px;
       margin: 0 auto;
       margin-bottom: 10px;
+    }
+    
+    .mix-wrapper > div {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mix.design {
+      width: 100%;
+      height: 230px;
+      margin: 1em 1%;
+      text-align: center;
+      padding: 5px;
+      display: inline-block;
+      list-style: none;
+    }
+    
+    .mix.design img {
+      max-width: 100%;
+      width: 230px;
+      height: 220px;
+      transition: opacity 0.3s ease-in-out;
+    }
+    
+    .mix.design:hover {
+      opacity: 0.75;
+    }
+
+    .design_box .square_logo {
+      width: 97%;
+      height: 100%;
+    }
+
+    .design_box_content {
+      padding: 10px 0 10px 20px;
+      width: 98%;
+      margin: 0 auto;
+      background: #eee;
+      border-radius: 10px;
+      border: none;
+      display: flex;
+      flex-direction: column;
+    }
+  
+
   }
-  }
+
 }
